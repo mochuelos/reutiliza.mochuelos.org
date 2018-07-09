@@ -376,8 +376,8 @@ header.masthead .intro-text .intro-heading img {
   position: absolute;
   top: 25px;
   right: 25px;
-  width: 75px;
-  height: 75px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
   background-color: transparent;
 }
@@ -390,8 +390,8 @@ header.masthead .intro-text .intro-heading img {
   /* Safari and Chrome */
   z-index: 1051;
   width: 1px;
-  height: 75px;
-  margin-left: 35px;
+  height: 25px;
+  margin-left: 12px;
   /* IE 9 */
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -403,12 +403,26 @@ header.masthead .intro-text .intro-heading img {
   /* Safari and Chrome */
   z-index: 1052;
   width: 1px;
-  height: 75px;
+  height: 25px;
   /* IE 9 */
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   background-color: #212529;
+}
+
+@media (min-width: 767px) {
+  .portfolio-modal .close-modal {
+    width: 75px;
+    height: 75px;
+  }
+  .portfolio-modal .close-modal .lr {
+    height: 75px;
+    margin-left: 35px;
+  }
+  .portfolio-modal .close-modal .lr .rl {
+    height: 75px;
+  }
 }
 
 .timeline {

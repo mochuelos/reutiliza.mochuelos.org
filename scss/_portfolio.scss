@@ -107,8 +107,8 @@
     position: absolute;
     top: 25px;
     right: 25px;
-    width: 75px;
-    height: 75px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
     background-color: transparent;
     &:hover {
@@ -118,8 +118,8 @@
       /* Safari and Chrome */
       z-index: 1051;
       width: 1px;
-      height: 75px;
-      margin-left: 35px;
+      height: 25px;
+      margin-left: 12px;
       /* IE 9 */
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
@@ -129,12 +129,24 @@
         /* Safari and Chrome */
         z-index: 1052;
         width: 1px;
-        height: 75px;
+        height: 25px;
         /* IE 9 */
         -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
         transform: rotate(90deg);
         background-color: $gray-900;
+      }
+    }
+
+    @media(min-width:767px) {
+      width: 75px;
+      height: 75px;
+      .lr {
+        height: 75px;
+        margin-left: 35px;
+        .rl {
+          height: 75px;
+        }
       }
     }
   }
