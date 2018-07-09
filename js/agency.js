@@ -82,6 +82,9 @@
     $(this).find('#query').focus();
   });
 
+  if (window.location.href.indexOf('solicitud=1') != -1) {
+    $('.solicitud').removeAttr('hidden');
+  }
   // if (window.location.href.indexOf('#solicitudModal') != -1) {
   //   $('#solicitudModal').modal('show');
   // }
