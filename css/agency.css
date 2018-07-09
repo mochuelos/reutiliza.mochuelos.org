@@ -431,7 +431,6 @@ header.masthead .intro-text .intro-heading img {
 .timeline > li {
   position: relative;
   min-height: 50px;
-  margin-bottom: 50px;
 }
 
 .timeline > li:after, .timeline > li:before {
@@ -444,11 +443,11 @@ header.masthead .intro-text .intro-heading img {
 }
 
 .timeline > li .timeline-panel {
+  text-align: center;
   position: relative;
   float: right;
   width: 100%;
   padding: 0 20px 0 100px;
-  text-align: left;
 }
 
 .timeline > li .timeline-panel:before {
@@ -465,6 +464,11 @@ header.masthead .intro-text .intro-heading img {
   border-left-width: 0;
 }
 
+.timeline > li .timeline-panel img {
+  width: 80%;
+  margin-bottom: 15px;
+}
+
 .timeline > li .timeline-image {
   position: absolute;
   z-index: 100;
@@ -479,16 +483,31 @@ header.masthead .intro-text .intro-heading img {
   background-color: #1abc96;
 }
 
+.timeline > li .timeline-image h4 {
+  font-size: 30px;
+  line-height: 66px;
+}
+
 .timeline > li .timeline-image img {
+  max-height: 75%;
+  max-width: 75%;
+  width: auto;
+  height: auto;
   position: absolute;
-  top: -20px;
+  top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.timeline > li .timeline-image.end {
+  background-color: #6D4C41;
 }
 
 .timeline > li.timeline-inverted > .timeline-panel {
   float: right;
   padding: 0 20px 0 100px;
-  text-align: left;
 }
 
 .timeline > li.timeline-inverted > .timeline-panel:before {
@@ -518,6 +537,10 @@ header.masthead .intro-text .intro-heading img {
   text-transform: none;
 }
 
+.timeline .timeline-body {
+  text-align: justify;
+}
+
 .timeline .timeline-body > ul,
 .timeline .timeline-body > p {
   margin-bottom: 0;
@@ -529,8 +552,6 @@ header.masthead .intro-text .intro-heading img {
   }
   .timeline > li {
     min-height: 100px;
-    margin-bottom: 100px;
-    display: block;
   }
   .timeline > li .timeline-panel {
     float: left;
@@ -544,24 +565,12 @@ header.masthead .intro-text .intro-heading img {
     margin-left: -50px;
   }
   .timeline > li .timeline-image h4 {
-    font-size: 13px;
-    line-height: 18px;
-    margin-top: 16px;
+    font-size: 40px;
+    line-height: 86px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     float: right;
     padding: 0 30px 20px 20px;
-    text-align: left;
-  }
-  .timeline > li span {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .timeline > li :before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
   }
 }
 
@@ -578,9 +587,8 @@ header.masthead .intro-text .intro-heading img {
     margin-left: -75px;
   }
   .timeline > li .timeline-image h4 {
-    font-size: 18px;
-    line-height: 26px;
-    margin-top: 30px;
+    font-size: 60px;
+    line-height: 136px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 20px 20px;
@@ -600,11 +608,25 @@ header.masthead .intro-text .intro-heading img {
     margin-left: -85px;
   }
   .timeline > li .timeline-image h4 {
-    margin-top: 40px;
+    line-height: 156px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
   }
+}
+
+.timeline-cta {
+  white-space: normal;
+  margin-top: 40px;
+  border: 7px solid #e9ecef;
+  background-color: #1abc96;
+  color: white;
+}
+
+.timeline-cta:hover {
+  border: 7px solid #dee2e6;
+  color: white;
+  background-color: #148f72;
 }
 
 .team-member {
@@ -637,7 +659,13 @@ section#contact {
   background-position: center;
 }
 
-section#contact img {
+section#contact a.btn-coop {
+  padding: 0;
+  border-radius: 50px;
+  border: 0;
+}
+
+section#contact a.btn-coop img {
   width: 200px;
   height: auto;
   border-radius: 50px;
