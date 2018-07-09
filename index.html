@@ -53,6 +53,9 @@
               <a class="nav-link js-scroll-trigger" href="#solucion">Solución</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" href="#solicitudModal">Solicitar</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#equipo">Equipo</a>
             </li>
             <li class="nav-item">
@@ -112,7 +115,7 @@
             <h2 class="section-heading text-uppercase">La solución</h2>
           </div>
         </div>
-        <div class="row">
+        <div class="row mt-5">
           <div class="col-lg-12">
             <ul class="timeline">
               <li>
@@ -192,7 +195,7 @@
 
         <div class="row">
           <div class="col-lg-12 text-center">
-            <a class="btn btn-xl text-uppercase timeline-cta" href="/solicitud">Pide Reutiliza a tu ayuntamiento</a>
+            <a class="btn btn-xl text-uppercase timeline-cta" data-toggle="modal" href="#solicitudModal">Pide Reutiliza a tu ayuntamiento</a>
           </div>
         </div>
       </div>
@@ -388,7 +391,7 @@
     <!-- Portfolio Modals -->
 
     <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -405,9 +408,9 @@
                   <p class="item-intro text-muted">Zona de enseres que no se reciclan e irán directamente al vertedero.</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg">
                   <p class="text-left">Esta foto es sacada de un Punto Limpio de un municipio de 7.000 habitantes un día cualquiera a una hora cualquiera. Muchos de los enseres que terminan aquí siguen funcionando. Con Reutiliza, esta montaña de residuos ha disminuido.</p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Cerrar</button>
+                  <button class="btn btn-primary" type="button" onclick="$('#portfolioModal1').modal('hide');$('#portfolioModal2').modal('show');">
+                    Siguiente</a>
+                    <i class="fa fa-chevron-right"></i>
                 </div>
               </div>
             </div>
@@ -417,7 +420,7 @@
     </div>
 
     <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -434,9 +437,12 @@
                   <p class="item-intro text-muted">Desarrollo del proyecto en El Boalo, Cerceda y Mataelpino.</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg">
                   <p class="text-left">El Boalo, Cerceda y Mataelpino ha sido el primer municipio en desarrollar el proyecto Reutiliza. Los artículos se almacenan y se suben a una página web para que cualquier vecino pueda reservarlos y recogerlos de manera gratuita.</p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Cerrar</button>
+                  <button class="btn btn-primary" type="button" onclick="$('#portfolioModal2').modal('hide');$('#portfolioModal1').modal('show');">
+                    <i class="fa fa-chevron-left"></i>
+                    Anterior</a>
+                  <button class="btn btn-primary ml-2" type="button" onclick="$('#portfolioModal2').modal('hide');$('#portfolioModal3').modal('show');">
+                    Siguiente</a>
+                    <i class="fa fa-chevron-right"></i>
                 </div>
               </div>
             </div>
@@ -446,7 +452,7 @@
     </div>
 
     <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -463,9 +469,57 @@
                   <p class="item-intro text-muted">Reutiliza fomenta la cultura de la lectura.</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg">
                   <p class="text-left">Recogemos libros que los vecinos ya no quieren fomentando la lectura y la cultura en el municipio. Libros infantiles, guías de viajes, novelas, comics, históricas,... todo tipo de libros han continuado su vida gracias a Reutiliza.</p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Cerrar</button>
+                  <button class="btn btn-primary" type="button" onclick="$('#portfolioModal3').modal('hide');$('#portfolioModal2').modal('show');">
+                    <i class="fa fa-chevron-left"></i>
+                    Anterior</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Solicitud Modal -->
+
+    <div class="portfolio-modal modal fade" id="solicitudModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2 class="text-uppercase mb-5">Solicita Reutiliza</h2>
+                  <div class="input-group mb-5">
+                      <input type="text" class="form-control typeahead" name="query" id="query" placeholder="Nombre de tu municipio (Madrid)" data-provide="typeahead" autocomplete="off">
+                      <div class="input-group-append">
+                          <button type="submit" class="btn btn-primary">
+                              <i class="fa fa-search"></i>
+                          </button>
+                      </div>
+                  </div>
+                  <div id="query-result">
+                    <!-- <i class="query-standby fa fa-map-marker fa-5x"></i> -->
+                    <img src="img/madrid.jpg">
+                  </div>
+                  <div id="disponible-template" hidden>
+                    <p class="lead">¡Tu municipio ya dispone de Reutiliza!</p>
+                    <p><a class="btn btn-primary btn-xl" href="http://bocema.reutiliza.eco">bocema.reutiliza.eco</a></p>
+                  </div>
+                  <div id="solicitud-template" hidden>
+                    <p class="lead">El concejal de medio ambiente es Jorge.</p>
+                    <p><a class="btn btn-primary btn-xl" href="mailto:contacto@mochuelos.org?subject=Solicitud Reutiliza&body=Me gustaría tener Reutiliza en mi municipio. Visita reutiliza.eco">Contacta con tu ayuntamiento</a></p>
+                  </div>
+                  <div id="desconocido-template" hidden>
+                    <p class="lead">Lo sentimos, desconocemos la dirección de contacto de tu ayuntamiento.</p>
+                    <p>Si conoces la dirección, por favor ponte en contacto con nosotros.</p>
+                    <p><a class="btn btn-primary btn-xl" href="mailto:contacto@mochuelos.org?subject=Solicitud Reutiliza&body=Me gustaría tener Reutiliza en mi municipio. el contacto es ...">contacto@mochuelos.org</a></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -480,6 +534,7 @@
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/typeahead/bootstrap3-typeahead.min.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>

@@ -730,3 +730,15 @@ ul.social-buttons li a {
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #1abc96;
 }
+
+#query-result .query-standby {
+  color: #1abc96;
+}
+
+#query-result img {
+  width: 150px;
+}
+
+#query-result .btn {
+  white-space: normal;
+}
