@@ -197,8 +197,8 @@ header.masthead {
 }
 
 header.masthead .intro-text {
-  padding-top: 150px;
-  padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 10px;
 }
 
 header.masthead .intro-text .intro-lead-in {
@@ -223,11 +223,13 @@ header.masthead .intro-text .intro-heading img {
   vertical-align: text-top;
 }
 
+header.masthead .intro-video iframe {
+  border: 2px solid rgba(249, 203, 64, 0.4) !important;
+  box-shadow: 10px 10px 8px #888888;
+  background-color: rgba(33, 37, 41, 0.6);
+}
+
 @media (min-width: 768px) {
-  header.masthead .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
-  }
   header.masthead .intro-text .intro-lead-in {
     font-size: 40px;
     font-style: italic;
