@@ -347,7 +347,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Reutiliza 2017</span>
+            <span class="copyright">Copyright &copy; Reutiliza 2020</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
@@ -529,6 +529,13 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+    
+    <!-- Date update -->
+    <script>
+      $( document ).ready(function() {
+        $('.copyright').html('Copyright &copy; Reutiliza ' + new Date().getFullYear());
+      });
+    </script>
 
   </body>
 
